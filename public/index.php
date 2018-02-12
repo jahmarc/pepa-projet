@@ -21,7 +21,7 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__.'/../deps/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -56,5 +56,6 @@ $response = $kernel->handle(
 );
 
 $response->send();
+//test
 
 $kernel->terminate($request, $response);
