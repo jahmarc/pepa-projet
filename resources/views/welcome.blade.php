@@ -81,10 +81,6 @@
                 <div class="title m-b-md">
                     Projet PEPA
                 </div>
-
-                <div class="links">
-                    <a href="/start">Start the test</a>
-                </div>
             <br/>
                 <div class="title">Le projet qui vous donnera envie de répondre aux sondages</div>
             </div>

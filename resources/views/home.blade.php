@@ -15,6 +15,10 @@
                     @endif
 
                     You are logged in!
+                    <br/>
+                        <div class="links">
+                            <a href="/start">Start the test</a>
+                        </div>
                 </div>
             </div>
         </div>
