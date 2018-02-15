@@ -5,6 +5,11 @@ session_start();
 use App\Http\Controllers\ImportSurvey;
 
 
+function loadClass($class){
+    require 'Classes/'.$class.'.php';
+}
+
+
 $data = new ImportSurvey();
 $info = $data->import(); //Get survey from REDCap
 $info = json_decode($info);
