@@ -2,13 +2,13 @@
 session_start();
 //This file to load survey and associations from RedCap
 
-use App\Http\Controllers\ImportSurvey;
-
+use App\ImportSurvey;
 
 function loadClass($class){
-    require 'Classes/'.$class.'.php';
+    require ($_SERVER["DOCUMENT_ROOT"].'/laravel/app/Http/Controllers/'.$class.'.php');
+    echo($_SERVER["DOCUMENT_ROOT"].'/laravel/app/Http/Controllers/'.$class.'.php');
+    xdebug_break();
 }
-
 
 $data = new ImportSurvey();
 $info = $data->import(); //Get survey from REDCap

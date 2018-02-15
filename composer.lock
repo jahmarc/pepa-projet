@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cb75ed71302891a7f9d7cc8486dc824c",
+    "content-hash": "6c62a19a8d17af5964d90909d1c109ac",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -1085,6 +1085,48 @@
                 "random"
             ],
             "time": "2017-09-27T21:40:39+00:00"
+        },
+        {
+            "name": "phpcap/phpcap",
+            "version": "0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aarenson/PHPCap.git",
+                "reference": "cc76d0f939262d927f52c4b3e9cdd916e67f5ad4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aarenson/PHPCap/zipball/cc76d0f939262d927f52c4b3e9cdd916e67f5ad4",
+                "reference": "cc76d0f939262d927f52c4b3e9cdd916e67f5ad4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-openssl": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "apigen/apigen": "v4.1.2",
+                "erusev/parsedown": "1.6.2",
+                "kzykhys/php-csv-parser": "1.4.1",
+                "phpunit/phpunit": "5.7.15",
+                "squizlabs/php_codesniffer": "2.8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "IU\\PHPCap\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "PHP API for REDCap",
+            "keywords": [
+                "redcap"
+            ],
+            "time": "2017-08-22T13:11:53+00:00"
         },
         {
             "name": "psr/container",

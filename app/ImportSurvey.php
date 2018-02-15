@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App;
 
-use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
 
 include 'redcap.php';
 
-class ImportSurvey
+class ImportSurvey extends Model
 {
     private $fields;
     private $ch;
