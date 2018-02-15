@@ -12,6 +12,7 @@ $apiUrl = 'https://redcap.hes-so.ch/api/';  # replace this URL with your institu
 $apiToken = '607F2068FA415C0FA16FEC713AABAE66';    # replace with your actual API token
 
 $project = new RedCapProject($apiUrl, $apiToken);
-$projectInfo = $project->exportRecords();
+$projectInfo = $project->exportMetadata();
+
 
 print_r($projectInfo);
