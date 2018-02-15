@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Question;
 use Illuminate\Http\Request;
 
-class QuestionsController extends Controller
+use IU\PHPCap\RedCapProject;
+
+
+class QuestionsController
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +16,24 @@ class QuestionsController extends Controller
      */
     public function index()
     {
-        //
-       # $questions = Question::all();
 
-        return view('survey.start'/*, ['questions'=> $questions]*/);
+        $apiUrl = 'https://redcap.hes-so.ch/api/';  # replace this URL with your institution's # REDCap API URL.
+
+        $apiToken = '607F2068FA415C0FA16FEC713AABAE66';    # replace with your actual API token
+
+        try {
+            $project = new RedCapProject($apiUrl, $apiToken);
+        }
+        catch(\Exception $e){
+            echo($e->getMessage());
+        }
+
+        $projectInfo = $project->exportMetadata();
+
+
+        print_r($projectInfo);
+
+        return view('survey.start')->with('questions', $projectInfo);
     }
 
     /**
