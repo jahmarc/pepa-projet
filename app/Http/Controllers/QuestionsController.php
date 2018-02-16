@@ -23,17 +23,21 @@ class QuestionsController
 
         try {
             $project = new RedCapProject($apiUrl, $apiToken);
-        }
-        catch(\Exception $e){
+        } catch (\Exception $e) {
             echo($e->getMessage());
         }
 
         $projectInfo = $project->exportMetadata();
 
+        $questions = json_decode($projectInfo);
 
-        #print_r($projectInfo);
+        $str     = str_replace('\u','u',$projectInfo);
+        $strJSON = preg_replace('/u([\da-fA-F]{4})/', '&#x\1;', $str);
 
-        return view('survey.start',array(\Auth::user(),'questions' => $projectInfo));
+
+        #print_r($strJSON);
+
+        return view('survey.start', array(\Auth::user(), 'questions' => $strJSON));
     }
 
     /**
@@ -49,7 +53,7 @@ class QuestionsController
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -60,7 +64,7 @@ class QuestionsController
     /**
      * Display the specified resource.
      *
-     * @param  \App\Question  $question
+     * @param  \App\Question $question
      * @return \Illuminate\Http\Response
      */
     public function show(Question $question)
@@ -71,7 +75,7 @@ class QuestionsController
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Question  $question
+     * @param  \App\Question $question
      * @return \Illuminate\Http\Response
      */
     public function edit(Question $question)
@@ -82,8 +86,8 @@ class QuestionsController
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Question  $question
+     * @param  \Illuminate\Http\Request $request
+     * @param  \App\Question $question
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Question $question)
@@ -94,12 +98,13 @@ class QuestionsController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Question  $question
+     * @param  \App\Question $question
      * @return \Illuminate\Http\Response
      */
     public function destroy(Question $question)
     {
         //
     }
+
 
 }
