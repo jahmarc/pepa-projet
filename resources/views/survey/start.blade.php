@@ -1,3 +1,5 @@
+<!doctype html>
+<meta name="csrf-token" content="{{ csrf_token() }}">
 
 @extends('layouts.app')
 use App\ImportSurvey;
