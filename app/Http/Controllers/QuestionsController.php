@@ -31,9 +31,9 @@ class QuestionsController
         $projectInfo = $project->exportMetadata();
 
 
-        print_r($projectInfo);
+        #print_r($projectInfo);
 
-        return view('survey.start')->with('questions', $projectInfo);
+        return view('survey.start',array(\Auth::user(),'questions' => $projectInfo));
     }
 
     /**
