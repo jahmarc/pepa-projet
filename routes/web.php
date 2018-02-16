@@ -26,5 +26,7 @@ Route::resource('questions', 'QuestionsController');
 
 
 
+Route::resource('category', 'QuestionsController@category1');
+
 
 
