@@ -2,7 +2,6 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 @extends('layouts.app')
-use App\ImportSurvey;
 @section('content')
     <div class="container">
         <div class="row justify-content-center">

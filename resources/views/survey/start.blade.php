@@ -2,7 +2,6 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 @extends('layouts.app')
-use App\ImportSurvey;
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -18,7 +17,7 @@ use App\ImportSurvey;
                             @foreach($questions as $question)
 
                                 @if($question->section_header!='')
-                                    <tr><td><a href="{{ route('qu') }}"><?=
+                                    <tr><td><a href="./category1"><?=
                                      $question->section_header;
                                     ?></a></td></tr>
 
