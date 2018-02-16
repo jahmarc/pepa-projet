@@ -15,7 +15,7 @@
                 <br/>
                 <br/>
                 <div class="card card-default ">
-                    <div class="card-header" style="font-size: 30px; background-color: #9fcdff; font-weight: bold;" >Summary Table</div>
+                    <div class="card-header" style="font-weight: bold; font-size: 30px; background-color: #9fcdff; " >Summary Table</div>
                     <div class="card">
 
                         <table style="font-size: 15px; text-align: justify-all;" class="table-striped table" >
