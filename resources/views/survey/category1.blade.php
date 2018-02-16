@@ -16,9 +16,9 @@
                         <table class="table">
                             @foreach($questions as $question)
 
-                                @if($question->section_header!='')
+                                @if($question->matrix_group_name == 'categorie'.$id)
                                     <tr><td><?=
-                                        $question->section_header;
+                                        $question->field_label;
                                         ?></tr></td>
 
                                 @endif

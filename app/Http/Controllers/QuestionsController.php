@@ -112,7 +112,7 @@ class QuestionsController
         //
     }
 
-    public function category1(){
+    public function category($id){
 
         $apiUrl = 'https://redcap.hes-so.ch/api/';  # replace this URL with your institution's # REDCap API URL.
 
@@ -136,7 +136,7 @@ class QuestionsController
         //print_r($projectInfo);
 
 
-        return view('survey.category1', array(\Auth::user(), 'questions' => $questions));
+        return view('survey.category1', array(\Auth::user(), 'questions' => $questions, 'id' => $id));
 
     }
 

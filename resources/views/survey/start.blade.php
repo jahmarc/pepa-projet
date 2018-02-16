@@ -4,6 +4,7 @@
 @extends('layouts.app')
 <?php
 $i=1;
+$x=1;
 ?>
 @section('content')
     <div class="container">
@@ -15,12 +16,11 @@ $i=1;
                 <div class="card card-default">
                     <div class="card-header">Summary Table</div>
                     <div class="card-body">
-                        <br/>
                         <table class="table">
                             @foreach($categories as $category)
 
 
-                                    <tr><td><a href="./category<?=$i?>"><?=
+                                    <tr><td><a href="./category/<?=$i?>"><?=
                                      $category;
                                     ?></a></td></tr>
                                 <?php $i++;?>

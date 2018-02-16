@@ -20,12 +20,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('questions/category1', 'QuestionsController@category1');
+Route::get('category/{id}', 'QuestionsController@category');
 
 Route::resource('questions', 'QuestionsController');
 
 
-Route::get('/category1', 'QuestionsController@category1');
 
 
 
