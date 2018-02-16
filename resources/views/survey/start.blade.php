@@ -2,6 +2,9 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 @extends('layouts.app')
+<?php
+$i=1;
+?>
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -14,16 +17,14 @@
                     <div class="card-body">
                         <br/>
                         <table class="table">
-                            @foreach($questions as $question)
+                            @foreach($categories as $category)
 
-                                @if($question->section_header!='')
-                                    <tr><td><a href="./category1"><?=
-                                     $question->section_header;
+
+                                    <tr><td><a href="./category<?=$i?>"><?=
+                                     $category;
                                     ?></a></td></tr>
-
-                                @endif
+                                <?php $i++;?>
                             @endforeach
-
                         </table>
                     </div>
                 </div>

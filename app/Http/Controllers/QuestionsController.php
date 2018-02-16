@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use IU\PHPCap\RedCapProject;
 
+use config;
 
 class QuestionsController
 {
@@ -16,7 +17,6 @@ class QuestionsController
      */
     public function index()
     {
-
         $apiUrl = 'https://redcap.hes-so.ch/api/';  # replace this URL with your institution's # REDCap API URL.
 
         $apiToken = '607F2068FA415C0FA16FEC713AABAE66';    # replace with your actual API token
@@ -39,7 +39,11 @@ class QuestionsController
         //print_r($projectInfo);
 
 
-        return view('survey.start', array(\Auth::user(), 'questions' => $questions));
+        $categories = array('Informations sur la maladie', 'Informations sur l\'accompagnement', 'Compétences d\'accompagnement', 'Possibilités de soutien', 'Besoin de souffler', 'Possibilités de répit',
+            'Qualité du répit', 'Soutien émotionnel ou social formel', 'Soutien émotionnel ou social informel', 'Soutien pratique', 'Soutien financier ou légal');
+
+
+        return view('survey.start', array(\Auth::user(), 'questions' => $questions, 'categories' => $categories));
     }
 
     /**
