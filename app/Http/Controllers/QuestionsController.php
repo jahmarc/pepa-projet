@@ -29,15 +29,16 @@ class QuestionsController
 
         $projectInfo = $project->exportMetadata();
 
-        $questions = json_decode($projectInfo);
+
 
         $str     = str_replace('\u','u',$projectInfo);
         $strJSON = preg_replace('/u([\da-fA-F]{4})/', '&#x\1;', $str);
 
+        $questions = json_decode($strJSON);
 
         #print_r($strJSON);
 
-        return view('survey.start', array(\Auth::user(), 'questions' => $strJSON));
+        return view('survey.start', array(\Auth::user(), 'questions' => $questions));
     }
 
     /**

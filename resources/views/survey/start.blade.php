@@ -11,10 +11,13 @@ use App\ImportSurvey;
                 <div class="card card-default">
                     <div class="card-header">Summary Table</div>
 
-                    <?=
-                       # $data = $questions;
-                        print_r ($questions);
+
+                    @foreach($questions as $question){
+                <?=
+                    print_r($question->section_header);
                     ?>
+                    }
+                    @endforeach
 
                     <div class="card-body">
                         <br/>
