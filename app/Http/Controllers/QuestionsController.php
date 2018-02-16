@@ -36,7 +36,8 @@ class QuestionsController
 
         $questions = json_decode($strJSON);
 
-        #print_r($strJSON);
+        //print_r($projectInfo);
+
 
         return view('survey.start', array(\Auth::user(), 'questions' => $questions));
     }
