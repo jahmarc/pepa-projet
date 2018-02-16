@@ -28,7 +28,7 @@
             <!-- Text Area -->
             <div class="form-group">
                 <div class="col-lg-10">
-                    {!! Form::label('question', $question->field_label, ['class' => 'col-lg-2 control-label']) !!}
+                    {!! Form::label('question', $question->field_label, ['class' => '']) !!}
                 </div>
             </div>
 
