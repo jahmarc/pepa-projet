@@ -12,7 +12,6 @@
                 <div class="card card-default">
                     <div class="card-header">Summary Table</div>
                     <div class="card-body">
-                        <br/>
                         <table class="table">
                             @foreach($questions as $question)
 
