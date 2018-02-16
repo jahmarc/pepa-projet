@@ -1,12 +1,11 @@
 <!doctype html>
-<head>
-    <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
-</head>
-<body style="background-color: #9e9e9e12">
-
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 @extends('layouts.app')
+<?php
+$i=1;
+$x=1;
+?>
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -14,21 +13,18 @@
                 <br/>
                 <br/>
                 <br/>
-                <div class="card card-default ">
-                    <div class="card-header" style="font-weight: bold; font-size: 30px; background-color: #9fcdff; " >Summary Table</div>
-                    <div class="card">
+                <div class="card card-default">
+                    <div class="card-header">Summary Table</div>
+                    <div class="card-body">
+                        <table class="table">
+                            @foreach($categories as $category)
 
-                        <table style="font-size: 15px; text-align: justify-all;" class="table-striped table" >
-                            @foreach($questions as $question)
 
-                                @if($question->section_header!='')
-                                    <tr><td><a href="./category1"><?=
-                                     $question->section_header;
-                                    ?></a></td></tr>
-
-                                @endif
+                                <tr><td><a href="./category/<?=$i?>"><?=
+                                            $category;
+                                            ?></a></td></tr>
+                                <?php $i++;?>
                             @endforeach
-
                         </table>
                     </div>
                 </div>
@@ -36,17 +32,3 @@
         </div>
     </div>
 @endsection
-</body>
-
-
-
-
-
-
-
-
-
-
-
-
-
