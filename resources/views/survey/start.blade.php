@@ -19,7 +19,7 @@ use App\ImportSurvey;
 
                                 @if($question->section_header!='')
                                     <tr><td><?=
-                                    print_r(substr(($question->section_header),0,-1));
+                                     $question->section_header;
                                     ?></tr></td>
 
                                 @endif
