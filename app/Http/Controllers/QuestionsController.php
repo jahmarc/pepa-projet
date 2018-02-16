@@ -108,5 +108,33 @@ class QuestionsController
         //
     }
 
+    public function category1(){
+
+        $apiUrl = 'https://redcap.hes-so.ch/api/';  # replace this URL with your institution's # REDCap API URL.
+
+        $apiToken = '607F2068FA415C0FA16FEC713AABAE66';    # replace with your actual API token
+
+        try {
+            $project = new RedCapProject($apiUrl, $apiToken);
+        } catch (\Exception $e) {
+            echo($e->getMessage());
+        }
+
+        $projectInfo = $project->exportMetadata();
+
+
+
+        $str     = str_replace('\u','u',$projectInfo);
+        $strJSON = preg_replace('/u([\da-fA-F]{4})/', '&#x\1;', $str);
+
+        $questions = json_decode($strJSON);
+
+        //print_r($projectInfo);
+
+
+        return view('survey.category1', array(\Auth::user(), 'questions' => $questions));
+
+    }
+
 
 }

@@ -18,9 +18,9 @@ use App\ImportSurvey;
                             @foreach($questions as $question)
 
                                 @if($question->section_header!='')
-                                    <tr><td><a href="{{ route('qu') }}"><?=
-                                     $question->section_header;
-                                    ?></a></td></tr>
+                                    <tr><td><?=
+                                        $question->section_header;
+                                        ?></tr></td>
 
                                 @endif
                             @endforeach
@@ -32,17 +32,3 @@ use App\ImportSurvey;
         </div>
     </div>
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
