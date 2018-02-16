@@ -29,4 +29,9 @@ Route::resource('questions', 'QuestionsController');
 Route::resource('category', 'QuestionsController@category1');
 
 
+Route::post('form-submit', array('before'=>'csrf',function(){
+    //form validation come here
+}));
+
+
 
