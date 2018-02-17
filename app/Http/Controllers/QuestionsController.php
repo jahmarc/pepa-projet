@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Input;
 use IU\PHPCap\RedCapProject;
 
 use config;
@@ -64,7 +65,9 @@ class QuestionsController
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+
+        print_r($input);
     }
 
     /**
@@ -111,6 +114,8 @@ class QuestionsController
     {
         //
     }
+
+
 
     public function category($id){
 
