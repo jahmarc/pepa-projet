@@ -14,7 +14,7 @@ $x=1;
                 <br/>
                 <br/>
                 <div class="card card-default">
-                    <div class="card-header">Summary Table</div>
+                    <div class="card-header">Table des matières</div>
                     <div class="card-body">
                         <table class="table">
                             @foreach($categories as $category)

@@ -133,10 +133,14 @@ class QuestionsController
 
         $questions = json_decode($strJSON);
 
+        $categories = array('Informations sur la maladie', 'Informations sur l\'accompagnement', 'Compétences d\'accompagnement', 'Possibilités de soutien', 'Besoin de souffler', 'Possibilités de répit',
+            'Qualité du répit', 'Soutien émotionnel ou social formel', 'Soutien émotionnel ou social informel', 'Soutien pratique', 'Soutien financier ou légal');
+
+
         //print_r($projectInfo);
 
 
-        return view('survey.category1', array(\Auth::user(), 'questions' => $questions, 'id' => $id));
+        return view('survey.category1', array(\Auth::user(), 'questions' => $questions, 'id' => $id, 'categories' => $categories));
 
     }
 

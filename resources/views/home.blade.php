@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card card-default">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Tableau de bord</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -17,7 +17,7 @@
                     You are logged in!
                     <br/>
                         <div class="links">
-                            <a href="{{ route('questions.index') }}">Start the test</a>
+                            <a href="{{ route('questions.index') }}">Commencer le test</a>
                         </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
             <br/>
             <br/>
             <div class="card card-default">
-                <div class="card-header">Summary Table</div>
+                <div class="card-header">Table des matières</div>
 
                 <div class="card-body">
                     <br/>
