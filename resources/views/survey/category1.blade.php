@@ -93,7 +93,7 @@ $x=1;
                                     @foreach($categories as $category)
 
 
-                                        <tr><td><a href="./category/<?=$i?>"><?=
+                                        <tr><td><a href="../category/<?=$i?>"><?=
                                                     $category;
                                                     ?></a></td></tr>
                                         <?php $i++;?>
