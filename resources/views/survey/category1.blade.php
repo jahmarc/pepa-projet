@@ -10,7 +10,7 @@ $x=1;
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-auto">
                 <br/>
                 <br/>
                 <br/>
@@ -37,66 +37,66 @@ $x=1;
 
                                     <!-- Radio Buttons -->
                                     <div class="form-group">
-                                        <div class="col-lg-10">
-                                            <div class="radio" style="float:left; width: 12.5%; ">
+                                        <div class="col-lg-auto">
+                                            <div class="radio" style="float:left; width: 12.5%; text-align: center; ">
                                                 <div class="radio" style="float: top; align-text:center;" >
                                                 {!! Form::label('radio1', 'Pas du tout') !!}
                                                 </div>
-                                                <div class="radio" style="float: top; width: 50%; margin: 0 auto;">
+                                                <div class="radio" style="float: top; width: 50%; margin: 0 auto;text-align: center;">
                                                 {!! Form::radio('radio', 'option1', true, ['id' => 'radio1']) !!}
                                                 </div>
                                             </div>
-                                            <div class="radio" style="float:left; clear: top; width: 12.5%;">
+                                            <div class="radio" style="float:left; clear: top; width: 12.5%;text-align: center;">
                                                 <div class="radio" style="float: top; align-text:center;" >
                                                 {!! Form::label('radio2', '1') !!}
                                                 </div>
-                                                <div class="radio" style="float: top; width: 50%; margin: 0 auto;">
+                                                <div class="radio" style="float: top; width: 50%; margin: 0 auto;text-align: center;">
                                                 {!! Form::radio('radio', 'option2', false, ['id' => 'radio2']) !!}
                                                 </div>
                                             </div>
-                                            <div class="radio" style="float:left; clear: top; width: 12.5%;">
+                                            <div class="radio" style="float:left; clear: top; width: 12.5%;text-align: center;">
                                                 <div class="radio" style="float: top; align-text:center;" >
                                                 {!! Form::label('radio3', 'Un peu') !!}
                                                 </div>
-                                                <div class="radio" style="float: top; width: 50%; margin: 0 auto;">
+                                                <div class="radio" style="float: top; width: 50%; margin: 0 auto;text-align: center;">
                                                 {!! Form::radio('radio', 'option3', false, ['id' => 'radio3']) !!}
                                                 </div>
                                             </div>
-                                            <div class="radio" style="float:left; clear: top; width: 12.5%;">
+                                            <div class="radio" style="float:left; clear: top; width: 12.5%;text-align: center;">
                                                 <div class="radio" style="float: top; align-text:center;" >
                                                 {!! Form::label('radio4', '3') !!}
                                                 </div>
-                                                <div class="radio" style="float: top; width: 50%; margin: 0 auto;">
+                                                <div class="radio" style="float: top; width: 50%; margin: 0 auto;text-align: center;">
                                                 {!! Form::radio('radio', 'option4', false, ['id' => 'radio4']) !!}
                                                 </div>
                                             </div>
-                                            <div class="radio" style="float:left; clear: top; width: 12.5%;">
+                                            <div class="radio" style="float:left; clear: top; width: 12.5%;text-align: center;">
                                                 <div class="radio" style="float: top; align-text:center;" >
                                                 {!! Form::label('radio5', 'Assez') !!}
                                                 </div>
-                                                <div class="radio" style="float: top; width: 50%; margin: 0 auto;">
+                                                <div class="radio" style="float: top; width: 50%; margin: 0 auto;text-align: center;">
                                                 {!! Form::radio('radio', 'option5', false, ['id' => 'radio5']) !!}
                                                 </div>
                                             </div>
-                                            <div class="radio" style="float:left; clear: top; width: 12.5%;">
+                                            <div class="radio" style="float:left; clear: top; width: 12.5%;text-align: center;">
                                                 <div class="radio" style="float: top; align-text:center;" >
                                                 {!! Form::label('radio6', '5') !!}
                                                 </div>
-                                                <div class="radio" style="float: top; width: 50%; margin: 0 auto;">
+                                                <div class="radio" style="float: top; width: 50%; margin: 0 auto;text-align: center;">
                                                 {!! Form::radio('radio', 'option5', false, ['id' => 'radio5']) !!}
                                                 </div>
                                             </div>
-                                            <div class="radio" style="float:left; clear: top; width: 12.5%;">
+                                            <div class="radio" style="float:left; clear: top; width: 12.5%;text-align: center;">
                                                 <div class="radio" style="float: top; align-text:center;" >
                                                 {!! Form::label('radio7', 'Tout à fait') !!}
                                                 </div>
-                                                <div class="radio" style="float: top; width: 50%; margin: 0 auto;">
+                                                <div class="radio" style="float: top; width: 50%; margin: 0 auto;text-align: center;">
                                                 {!! Form::radio('radio', 'option7', false, ['id' => 'radio7']) !!}
                                                 </div>
                                             </div>
-                                            <div class="radio" style="float:left; clear: top; width: 12.5%;">
+                                            <div class="radio" style="float:left; clear: top; width: 12.5%; min-width:100px;text-align: center;">
                                                 <div class="radio" style="float: top; align-text:center;" >
-                                                {!! Form::label('radio8', 'Ne s\'applique pas') !!}
+                                                {!! Form::label('radio8', 'Pas concerné') !!}
                                                 </div>
                                                 <div class="radio" style="float: top; width: 50%; margin: 0 auto;">
                                                 {!! Form::radio('radio', 'option8', false, ['id' => 'radio8']) !!}
