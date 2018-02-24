@@ -18,24 +18,6 @@ class QuestionsController
      */
     public function index()
     {
-        $apiUrl = 'https://redcap.hes-so.ch/api/';  # replace this URL with your institution's # REDCap API URL.
-
-        $apiToken = '607F2068FA415C0FA16FEC713AABAE66';    # replace with your actual API token
-
-        try {
-            $project = new RedCapProject($apiUrl, $apiToken);
-        } catch (\Exception $e) {
-            echo($e->getMessage());
-        }
-
-        $projectInfo = $project->exportMetadata();
-
-
-
-        $str     = str_replace('\u','u',$projectInfo);
-        $strJSON = preg_replace('/u([\da-fA-F]{4})/', '&#x\1;', $str);
-
-        $questions = json_decode($strJSON);
 
         //print_r($projectInfo);
 
@@ -44,7 +26,7 @@ class QuestionsController
             'Qualité du répit', 'Soutien émotionnel ou social formel', 'Soutien émotionnel ou social informel', 'Soutien pratique', 'Soutien financier ou légal');
 
 
-        return view('survey.start', array(\Auth::user(), 'questions' => $questions, 'categories' => $categories));
+        return view('survey.start', array(\Auth::user(), 'categories' => $categories));
     }
 
     /**
